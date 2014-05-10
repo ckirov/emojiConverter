@@ -3,8 +3,10 @@ import codecs
 import json
 
 #get the file to convert
-infile = sys.argv[1]
-outfile = sys.argv[2]
+incoding = sys.argv[1]
+outcoding = sys.argv[2]
+infile = sys.argv[3]
+outfile = sys.argv[4]
 
 #get the conversion table
 json_data = codecs.open('emoji_ios6.json',encoding='utf-8')
@@ -14,8 +16,8 @@ json_data.close()
 #get mapping for corrections
 fixdict = {}
 for line in data:
-	if line['softbank-utf8'] != "":
-		fixdict[line['softbank-utf8']] = line['utf8'].decode('hex').decode('utf-8')
+	if line[incoding] != "":
+		fixdict[line[incoding]] = line[outcoding].decode('hex').decode('utf-8')
 
 #convert
 fin = codecs.open(infile,encoding='utf-8')
