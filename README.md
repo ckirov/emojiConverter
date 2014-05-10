@@ -1,7 +1,7 @@
 emojiConverter
 ==============
 
-Simple script to convert between different emoji encodings.
+Simple script to convert text files using different emoji encodings.
 
 You'll need the conversion table from http://punchdrunker.github.io/iOSEmoji/table_html/ios6/emoji_ios6.json in the same directory as the script.
 
